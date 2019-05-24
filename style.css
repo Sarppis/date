@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: lightblue;
+}
+
+body {
+  font-family: 'Bree Serif', serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 50px 0 0;
+}
+
+h3 {
+  margin-top: 50px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+input {
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.button {
+  font-family: 'Bree Serif', serif;
+  font-size: 14px;
+  margin: 30px 0 0 0;
+  padding: 5px 12px;
+  border-radius: 3px;
+  border-style: none;
+  background-color: #4f4e4e;
+  color: yellow;
+}
+
+#demo {
+  color: red;
+}
