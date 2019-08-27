@@ -1,8 +1,18 @@
+let weekday = new Array(7);
+
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
 function countDays() {
-  let days =[];
-    let startDate = new Date(document.getElementById('startDate').value);
-  let myDate = document.getElementById('myDate').value;
-  let endDate = new Date(myDate);
+  let days = [];
+  let startDate = new Date(document.getElementById('startDate').value);
+  //let myDate = document.getElementById('myDate').value;
+  let endDate = new Date(document.getElementById('myDate').value);
 
   while (startDate <= endDate) {
     startDate.setDate(startDate.getDate() + 1);
@@ -13,31 +23,22 @@ document.getElementById('demo2').innerHTML = 'There is ' + days.length + ' days 
 }
 
 function workDays() {
-  let days = [];
-  let startDate = new Date();
-  let myDate = document.getElementById('myDate').value;
-  let endDate = new Date(myDate);
+let days = [];
+let startDate = new Date(document.getElementById('startDate').value);
+//let myDate = document.getElementById('myDate').value;
+let endDate = new Date(document.getElementById('myDate').value);
 
-  let weekday = new Array(7);
-  weekday[0] = "Sunday";
-  weekday[1] = "Monday";
-  weekday[2] = "Tuesday";
-  weekday[3] = "Wednesday";
-  weekday[4] = "Thursday";
-  weekday[5] = "Friday";
-  weekday[6] = "Saturday";
-
-  while (startDate <= endDate) {
-    let weekDayName = weekday[startDate.getDay()];
-    if (weekday < 6) {
-      days.push(weekDayName);
-      console.log(weekDayName);
-}
-    startDate.setDate(startDate.getDate() + 1);
-    days.push(weekDayName);
+while (startDate <= endDate) {
+  let weekDayName = weekday[startDate.getDay()];
+  startDate.setDate(startDate.getDate() + 1);
+  if (weekDayName != 'Sunday' && weekDayName!= 'Saturday') {
+  days.push(weekDayName);
+  console.log(days);
   }
-console.log(weekday.length);
-document.getElementById("days").innerHTML = weekday.length + " working days";
+}
+
+console.log(days.length);
+document.getElementById("demo3").innerHTML = days.length + " working days";
 }
 
 
